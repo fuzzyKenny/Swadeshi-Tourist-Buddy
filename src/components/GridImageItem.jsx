@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
@@ -23,10 +23,23 @@ const GridImageItem = ({ imgsrc, title }) => {
 
   const toggleModal = () => setModalOpen(!modalOpen);
 
+  useEffect(() => {
+    if (modalOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    // Cleanup on unmount or when modalOpen changes
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [modalOpen]);
+
   return (
     <>
       <div
-        className="flex gap-12 justify-center hover:outline-2 outline-green-500/80 transition-opacity rounded-xl overflow-hidden cursor-pointer"
+        className="flex gap-12 justify-center hover:scale-115 transition-all rounded-xl overflow-hidden cursor-pointer shadow-2xl"
         onClick={toggleModal}
       >
         <img src={imgsrc} alt="placeholder" className="object-cover" />

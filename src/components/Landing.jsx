@@ -1,12 +1,13 @@
 import { Navigate, useNavigate } from "react-router-dom";
 import GridImageItem from "./GridImageItem";
 import Footer from "./Footer";
+import { ArrowRight } from "lucide-react";
 
 const Landing = () => {
   const navigate = useNavigate();
   return (
     <>
-      <div className="min-h-screen bg-amber-50 p-4">
+      <div className="min-h-screen bg-amber-50 p-4 ">
         {/* Heading */}
         <div className="flex items-center flex-col gap-2.5">
           <h1 className="text-4xl font-bold">Swadeshi Tourist Buddy</h1>
@@ -25,15 +26,15 @@ const Landing = () => {
               title={"Ellora Caves"}
             />
           </div>
-          <div className="flex justify-center ">
-            <button
+          <div className="flex cursor-pointer hover:border-b border-black mx-auto">
+            <p
               onClick={() => {
                 navigate("/learn-more");
               }}
-              className="hover:border-b border-black"
             >
-              Learn more.
-            </button>
+              Learn More
+            </p>
+            <ArrowRight />
           </div>
         </div>
       </div>
