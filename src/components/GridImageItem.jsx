@@ -19,7 +19,7 @@ const GridImageItem = ({ imgsrc }) => {
           className="absolute top-0 left-0 right-0 bottom-0 bg-gray-900/30 flex items-center justify-center"
           onClick={toggleModal}
         >
-          <div className="flex gap-10 rounded-xl max-w-5xl justify-between bg-white p-6 items-center">
+          <div className="flex gap-10 rounded-xl max-w-5xl justify-between bg-white p-6 items-center z-10">
             <div className="flex flex-col gap-2 min-w-lg">
               <h1 className="text-3xl">Taj Mahal</h1>
               <div className="max-h[50vh] overflow-auto">

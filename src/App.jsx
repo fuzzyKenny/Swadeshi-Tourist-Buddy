@@ -6,12 +6,12 @@ const App = () => {
       <div className="min-h-screen bg-amber-50 p-4">
         {/* Heading */}
         <div className="flex items-center flex-col gap-2.5">
-          <h1 className="text-4xl font-bold">Heading</h1>
-          <p>Subheading</p>
+          <h1 className="text-4xl font-bold">Some Heading</h1>
+          <p>Some Subheading</p>
         </div>
         {/* Content */}
         <div className="flex flex-col gap-8">
-          <div className="max-w-5xl mx-auto mt-8 grid grid-cols-3 grid-rows-2 gap-4">
+          <div className="max-w-5xl mx-auto mt-12 grid grid-cols-3 grid-rows-2 gap-4">
             <GridImageItem imgsrc={"/taj-mahal.jpg"} />
             <GridImageItem imgsrc={"/red-fort.jpg"} />
             <GridImageItem imgsrc={"/india-gate.jpg"} />
